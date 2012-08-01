@@ -1,0 +1,3 @@
+FoxiePodcastsBundle_homepage:
+    pattern:  /
+    defaults: { _controller: FoxiePodcastsBundle:Default:index }
