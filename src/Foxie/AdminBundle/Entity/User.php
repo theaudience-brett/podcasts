@@ -9,7 +9,6 @@ use Symfony\Component\Security\Core\User\UserInterface;
  * Foxie\AdminBundle\Entity\User
  *
  * @ORM\Table(name="users")
- * @ORM\Entity(repositoryClass="Foxie\AdminBundle\Entity\UserRepository")
  */
 class User implements UserInterface
 {
