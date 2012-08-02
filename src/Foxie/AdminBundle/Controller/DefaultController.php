@@ -9,10 +9,14 @@ use Symfony\Component\HttpFoundation\Response;
 class DefaultController extends Controller
 {
     public function createAction() {
-        $ezuser = new Foxie\AdminBundle\Entity\User();
+        $factory = $this->get('security.encoder_factory');
+        $ezuser = new \Foxie\AdminBundle\Entity\User();
         $ezuser->setUsername('ezfozie');
         $ezuser->setEmail('ezfoxie@foxienet.com');
-        $ezuser->setPass('google04');
+        
+        $encoder = $factory->getEncoder($ezuser);
+        $pass = $encoder->encodePassword('google04', $ezuser->getSalt());
+        $ezuser->setPassword($pass);
         
         $em = $this->getDoctrine()->getEntityManager();
         $em->persist($ezuser);
