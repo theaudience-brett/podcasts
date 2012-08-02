@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new Symfony\Bundle\DoctrineMigrationsBundle\DoctrineMigrationsBundle(),
             new Foxie\PodcastsBundle\FoxiePodcastsBundle(),
+            new Foxie\AdminBundle\FoxieAdminBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

@@ -1,3 +1,7 @@
+FoxieAdminBundle:
+    resource: "@FoxieAdminBundle/Resources/config/routing.yml"
+    prefix:   /admin
+
 FoxiePodcastsBundle:
     resource: "@FoxiePodcastsBundle/Resources/config/routing.yml"
     prefix:   /podcasts

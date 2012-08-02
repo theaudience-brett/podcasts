@@ -1,0 +1,7 @@
+parameters:
+#    foxie_admin.example.class: Foxie\AdminBundle\Example
+
+services:
+#    foxie_admin.example:
+#        class: %foxie_admin.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

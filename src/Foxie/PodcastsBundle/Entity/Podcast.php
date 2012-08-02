@@ -27,6 +27,13 @@ class Podcast
      * @ORM\Column(name="name", type="string", length=255)
      */
     private $name;
+    
+    /**
+     * @var string $slug
+     *
+     * @ORM\Column(name="slug", type="string", length=255)
+     */
+    private $slug;
 
     /**
      * @var string $location
@@ -48,6 +55,13 @@ class Podcast
      * @ORM\Column(name="recorded", type="date")
      */
     private $recorded;
+
+    /**
+     * @var boolean $deleted
+     *
+     * @ORM\Column(name="deleted", type="boolean")
+     */
+    private $deleted;
 
 
     /**
@@ -138,5 +152,45 @@ class Podcast
     public function getRecorded()
     {
         return $this->recorded;
+    }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string 
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * Set deleted
+     *
+     * @param boolean $deleted
+     */
+    public function setDeleted($deleted)
+    {
+        $this->deleted = $deleted;
+    }
+
+    /**
+     * Get deleted
+     *
+     * @return boolean 
+     */
+    public function getDeleted()
+    {
+        return $this->deleted;
     }
 }
