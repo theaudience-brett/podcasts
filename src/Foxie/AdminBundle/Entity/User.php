@@ -22,22 +22,22 @@ class User implements UserInterface
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=25, unique=true)
+     * @ORM\Column(name="username", type="string", length=25, unique=true)
      */
     private $username;
 
     /**
-     * @ORM\Column(type="string", length=32)
+     * @ORM\Column(name="salt", type="string", length=32)
      */
     private $salt;
 
     /**
-     * @ORM\Column(type="string", length=40)
+     * @ORM\Column(name="password", type="string", length=40)
      */
     private $password;
 
     /**
-     * @ORM\Column(type="string", length=60, unique=true)
+     * @ORM\Column(name="email", type="string", length=60, unique=true)
      */
     private $email;
 
