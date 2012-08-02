@@ -5,6 +5,10 @@ FoxieAdminBundle_home:
 FoxieAdminBundle_login:
     pattern:  /login
     defaults: { _controller: FoxieAdminBundle:Default:login }
+    
+FoxieAdminBundle_create:
+    pattern:  /create
+    defaults: { _controller: FoxieAdminBundle:Default:create }
 
 FoxieAdminBundle_login_check:
     pattern:  /login_check

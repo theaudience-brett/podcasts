@@ -4,10 +4,24 @@ namespace Foxie\AdminBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Security\Core\SecurityContext;
+use Symfony\Component\HttpFoundation\Response;
 
 class DefaultController extends Controller
 {
-    
+    public function createAction() {
+        $ezuser = new Foxie\AdminBundle\Entity\User();
+        $ezuser->setUsername('ezfozie');
+        $ezuser->setEmail('ezfoxie@foxienet.com');
+        $ezuser->setPass('google04');
+        
+        $em = $this->getDoctrine()->getEntityManager();
+        $em->persist($ezuser);
+        $em->flush();
+
+        return new Response('Created user with ID: '.$ezuser->getId());
+        
+        
+    }
     public function indexAction()
     {
         return $this->render('FoxieAdminBundle:Default:index.html.twig');

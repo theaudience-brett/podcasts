@@ -51,6 +51,30 @@ class User implements UserInterface
         $this->isActive = true;
         $this->salt = md5(uniqid(null, true));
     }
+    
+    public function setUsername($username) {
+        $this->username = $username;
+    }
+    
+    public function setPassword($pass) {
+        $this->password = $pass;
+    }
+    
+    public function getEmail() {
+        return $this->email;
+    }
+    
+    public function setEmail($email) {
+        $this->email = $email;
+    }
+    
+    public function getIsActive() {
+        return $this->isActive;
+    }
+    
+    public function setIsActive($isActive) {
+        $this->isActive = $isActive;
+    }
 
     /**
      * @inheritDoc
